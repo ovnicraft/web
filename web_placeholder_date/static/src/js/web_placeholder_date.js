@@ -7,7 +7,7 @@ openerp.web_placeholder_date = function(instance) {
 	initialize_content: function() {
 	    //TODO: read format from res.lang
 	    lang_code = this.session.user_context.lang;
-	    var placeholder = 'mm/dd/YYYY'; // en_US date format by default
+	    var placeholder = 'dd/mm/YYYY'; // en_US date format by default
 	    this.alive(new instance.web.Model('res.lang').call(
 		'get_placeholder', [lang_code]
 	    )).then(function (results) {
